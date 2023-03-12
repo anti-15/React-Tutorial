@@ -18,13 +18,13 @@ const Example = () => {
       <div>
         <label>
           入力値を取得：
-          <input type="text" onChange={(e) => console.log(e.target.value)} />
+          <input type="text" onChange={(taku) => console.log(taku.target.value)} />
         </label>
       </div>
       {/* POINT 複数のイベントを登録 */}
       <div
         className="hover-event"
-        onMouseEnter={() => console.log("カーソルが入ってきました。")}
+        onMouseEnter={() => {console.log("カーソルが入ってきました");}}
         onMouseLeave={() => console.log("カーソルが出ていきました。")}
       >
         ホバーしてね！
