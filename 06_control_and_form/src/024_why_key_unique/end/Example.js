@@ -8,7 +8,7 @@ const Example = () => {
   });
 
   const [inputs, setInputs] = useState([inputFact(), inputFact(), inputFact()]);
-
+  console.log(inputs);
   const unshiftInput = () => {
     setInputs((prev) => [inputFact(), ...prev]);
   };
