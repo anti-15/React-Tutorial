@@ -10,21 +10,39 @@ const Example = () => {
   const [sum, setSum] = useState(0);
 
   const handleChange = (e) => {
-    const newFruits = fruits.map((fruit) => {
-      //stateは常に新しいオブジェクトを使うというお作法がある
-      const newFruit = { ...fruit };
-      if (newFruit.label === e.target.value) {
-        newFruit.checked = !fruit.checked;
-      }
+    // const newFruits = fruits.map((fruit) => {
+    //   //stateは常に新しいオブジェクトを使うというお作法がある
+    //   const newFruit = { ...fruit };
+    //   if (newFruit.label === e.target.value) {
+    //     newFruit.checked = !fruit.checked;
+    //   }
 
-      return newFruit;
+    //   return newFruit;
+    // });
+
+    // let sumVal = 0;
+
+    // newFruits.forEach((fruit) => {
+    //   if (fruit.checked) {
+    //     sumVal += fruit.value;
+    //   }
+    // })
+
+    // setSum(sumVal);
+
+
+    //配列コピーしないパターン
+    const aaa = fruits.map((fruit) => {
+      if (fruit.label === e.target.value) {
+        fruit.checked = !fruit.checked;
+      }
+      return fruit;
     });
 
-    setFruits(newFruits);
+    setFruits(aaa);
 
     let sumVal = 0;
-
-    newFruits.forEach((fruit) => {
+    aaa.forEach((fruit) => {
       if (fruit.checked) {
         sumVal += fruit.value;
       }
