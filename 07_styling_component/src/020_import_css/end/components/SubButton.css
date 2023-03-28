@@ -1,4 +1,4 @@
-.btn {
+.btn2 {
     margin: auto;
     border-radius: 9999px;
     border: none;
@@ -7,7 +7,7 @@
     height: 60px;
     font-weight: bold;
     cursor: pointer;
-    background: orange;
+    background: red;
 }
 
 .selected {
